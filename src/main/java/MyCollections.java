@@ -18,13 +18,13 @@ public class MyCollections {
             T midVal = list.get(mid);
             int cmp = c.compare(midVal, key);
             if (cmp < 0) {
-                fromIndex = mid + 1; // Ищем в правой половине
+                fromIndex = mid + 1;
             } else if (cmp > 0) {
-                toIndex = mid; // Ищем в левой половине
+                toIndex = mid;
             } else {
-                return mid; // Найдено
+                return mid;
             }
         }
-        return -(fromIndex + 1); // Ключ не найден
+        return -(fromIndex + 1);
     }
 }
